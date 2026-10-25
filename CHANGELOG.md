@@ -10,3 +10,7 @@
 
 ### Changed
 - Declared English document language and added a descriptive page title.
+
+### Verified
+- Public production URL and sharing assets, responsive Chrome layouts and core interactions.
+- Refreshed repository screenshots from the production site.
