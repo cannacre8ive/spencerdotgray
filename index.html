@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Spencer Gray — Brand, Operations &amp; Software</title>
 <link rel="canonical" href="https://spencerdotgray.vercel.app/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0a0a0c">
+<meta name="theme-color" content="#f6f3ec">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spencer Gray">
@@ -25,48 +25,41 @@
 <meta name="description" content="Spencer Gray builds the brands, systems and tools that make new or messy operations work. Six case studies: Ideal Cannabis, PRESSWRK, workflow systems, Operator Intelligence, Flower Spectrum and photography.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Schibsted+Grotesk:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500..900;1,500..900&family=Inter:wght@400;500;600&display=swap">
 <style>
-/* Layout: dark stage with a hairline grid. Full-bleed hero → index → pinned 01/06 showcase → long-form chapters → photo reel → about → contact. */
+/* Layout: warm paper stage with a hairline grid. Full-bleed hero → index → pinned 01/06 showcase → long-form chapters → photo reel → about → contact.
+   v1.1 palette matches the Skeptic's Deck: paper #f6f3ec, ink #14120e, cobalt #2448d8. Every text pairing ≥ 4.5:1. */
 :root{
-  color-scheme: dark;
-  --bg:#0a0a0c;
-  --bg-2:#121216;
-  --fg:#ecebe8;
-  --muted:#8f8d99;
-  --line:rgba(236,235,232,.13);
-  --line-strong:rgba(236,235,232,.32);
-  --accent:#a99bff;
-  --accent-ink:#0a0a0c;
-  --shade:rgba(10,10,12,.72);
-  --f-display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
-  --f-body:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --f-mono:"Spline Sans Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+  --bg:#f6f3ec;
+  --bg-2:#ece7dc;
+  --fg:#14120e;
+  --muted:#5c564b;
+  --line:rgba(20,18,14,.14);
+  --line-strong:rgba(20,18,14,.42);
+  --accent:#2448d8;
+  --accent-ink:#fbf9f4;
+  --shade:rgba(246,243,236,.88);
+  --f-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Inter", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"Archivo", "Helvetica Neue", Arial, sans-serif;
   --gut:max(16px, env(safe-area-inset-left, 0px));
   --gut-r:max(16px, env(safe-area-inset-right, 0px));
   --wrap:1320px;
   --ease:cubic-bezier(.2,.7,.1,1);
 }
-@media (prefers-color-scheme: light){
-  :root:not([data-theme="dark"]){
-    color-scheme: light;
-    --bg:#ececee; --bg-2:#e1e1e5; --fg:#121216; --muted:#5d5b67;
-    --line:rgba(18,18,22,.13); --line-strong:rgba(18,18,22,.34);
-    --accent:#5a45de; --accent-ink:#ffffff; --shade:rgba(236,236,238,.8);
-  }
-}
-:root[data-theme="light"]{
-  color-scheme: light;
-  --bg:#ececee; --bg-2:#e1e1e5; --fg:#121216; --muted:#5d5b67;
-  --line:rgba(18,18,22,.13); --line-strong:rgba(18,18,22,.34);
-  --accent:#5a45de; --accent-ink:#ffffff; --shade:rgba(236,236,238,.8);
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#14120e; --bg-2:#1f1c17; --fg:#f6f3ec; --muted:#c9c2b4;
+  --line:rgba(246,243,236,.16); --line-strong:rgba(246,243,236,.42);
+  --accent:#8ea6ff; --accent-ink:#14120e; --shade:rgba(20,18,14,.86);
 }
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   background:var(--bg); color:var(--fg);
-  font-family:var(--f-body); font-size:17px; line-height:1.6;
+  font-family:var(--f-body); font-size:18px; line-height:1.6;
   -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
@@ -114,11 +107,10 @@ a{color:inherit}
 .hero-grid circle{fill:var(--line-strong)}
 #blob{position:absolute;z-index:-1;width:min(64vmin,620px);aspect-ratio:1;left:50%;top:50%;translate:-50% -52%;
   will-change:transform,opacity}
-#blob.fallback{border-radius:50%;background:radial-gradient(circle at 35% 30%, #d8c9ff, #7e6cff 40%, #2b1e8f 75%);filter:blur(2px)}
+#blob.fallback{border-radius:50%;background:radial-gradient(circle at 35% 30%, #ffffff, #c9d4ff 45%, #9fb2f5 80%);filter:blur(2px)}
+:root[data-theme="dark"] #blob.fallback{background:radial-gradient(circle at 35% 30%, #3a52a8, #1d2f73 45%, #121a3c 80%)}
 .hero-copy{text-align:center;padding-inline:var(--gut) var(--gut-r);display:grid;gap:22px;justify-items:center}
-.hero h1{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(76px,13.5vw,212px);line-height:.86;letter-spacing:-.025em;font-optical-sizing:auto;text-wrap:balance;mix-blend-mode:difference;color:#ecebe8}
-:root[data-theme="light"] .hero h1{mix-blend-mode:normal;color:var(--fg)}
-@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .hero h1{mix-blend-mode:normal;color:var(--fg)} }
+.hero h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:clamp(72px,12.5vw,200px);line-height:.9;letter-spacing:-.04em;text-wrap:balance;color:var(--fg)}
 .hero h1 em{font-style:italic}
 .hero-sub{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;color:var(--fg)}
 .hero-sub .star{color:var(--accent)}
@@ -354,6 +346,19 @@ a{color:inherit}
 .rv{transition:transform 1s var(--ease)}
 .js .rv.pending{transform:translateY(28px)}
 
+/* ───── v1.1 type system: heavy grotesk display, Inter body, labels ≥ 13px ───── */
+.slide h2,.case-title,.about h2,.contact h2{font-weight:800;letter-spacing:-.035em;line-height:.95}
+.thesis p.big,.index .t,.lede,.beat-body p.pull,.mail .addr{font-weight:700;letter-spacing:-.02em}
+.setlist li{font-weight:700;letter-spacing:-.01em}
+.moves h4,.phases li b,.story h4{font-weight:800;letter-spacing:-.01em}
+.slide h2 em,.case-title em,.about h2 em,.index .t em{font-style:normal;color:var(--accent)}
+.contact h2 em{font-style:normal}
+.mono,.logo span,.nav a,.cta,.chips li,.story .kpi,.terp-table th,.setlist li span,.roles .yr,.btn,.moves li::before{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.1em}
+.brief-row .mono{font-size:12px}
+.d-text{font-size:11px;font-weight:700}
+.slide p.one,.moves p{opacity:1}
+.lede{color:var(--fg)}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
   html{scroll-behavior:auto}
@@ -380,7 +385,7 @@ a{color:inherit}
       <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
         <rect x=".6" y=".6" width="32.8" height="32.8"/><rect x="5" y="5" width="24" height="24"/>
         <path d="M.6 .6 5 5M33.4 .6 29 5M.6 33.4 5 29M33.4 33.4 29 29"/>
-        <text x="17" y="21.3" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="12" font-style="italic" fill="currentColor" stroke="none">sg</text>
+        <text x="17" y="21.3" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="12" font-weight="800" font-style="italic" fill="currentColor" stroke="none">sg</text>
       </svg>
       <span>Spencer Gray</span>
     </a>
@@ -699,7 +704,7 @@ a{color:inherit}
               <text x="80" y="200">Contract accepted</text><text x="230" y="200">Proof sent</text><text x="380" y="200">Approved → advance</text><text x="530" y="200">To-do → printed</text><text x="680" y="200">Shipped · invoiced</text>
             </g>
             <g fill="none" class="d-line"><circle cx="80" cy="120" r="10"/><circle cx="230" cy="120" r="10"/><circle cx="380" cy="120" r="10"/><circle cx="530" cy="120" r="10"/><circle cx="680" cy="120" r="10"/></g>
-            <g class="job-token"><rect x="62" y="104" width="36" height="32" rx="3" class="d-acc"/><text x="80" y="124" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="9" fill="var(--accent-ink)">JOB</text></g>
+            <g class="job-token"><rect x="62" y="104" width="36" height="32" rx="3" class="d-acc"/><text x="80" y="124" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="9" fill="var(--accent-ink)">JOB</text></g>
             <g class="d-text" text-anchor="middle"><text x="380" y="236" class="d-text fg">Each stage change notifies the next team. The owner sees every job in one view.</text></g>
           </svg>
         </div>
@@ -969,12 +974,13 @@ a{color:inherit}
 
   /* theme toggle */
   const btn=document.getElementById('themeBtn');
-  try{const t=localStorage.getItem('sg-theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  try{const t=localStorage.getItem('sg-theme-v2'); if(t==='dark') root.setAttribute('data-theme','dark');}catch(e){}
   btn.addEventListener('click',()=>{
-    const cur=root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
-    const next=cur==='dark'?'light':'dark';
-    root.setAttribute('data-theme',next);
-    try{localStorage.setItem('sg-theme',next);}catch(e){}
+    const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    if(next==='dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+    const tc=document.querySelector('meta[name="theme-color"]'); if(tc) tc.content=next==='dark'?'#14120e':'#f6f3ec';
+    try{localStorage.setItem('sg-theme-v2',next);}catch(e){}
+    if(window.__blobRedraw) window.__blobRedraw();
   });
 
   /* curtain counter */
@@ -1063,7 +1069,7 @@ a{color:inherit}
   if(!gl){ cv.classList.add('fallback'); return; }
   const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   const fs=`precision highp float;
-  uniform vec2 R;uniform float T;uniform vec2 M;
+  uniform vec2 R;uniform float T;uniform vec2 M;uniform float D;
   mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
   float map(vec3 p){
     p.xz*=rot(T*.18+M.x*.6); p.yz*=rot(M.y*.5+.25);
@@ -1083,13 +1089,20 @@ a{color:inherit}
     float fr=pow(1.-max(dot(n,-rd),0.),2.2);
     float h=dot(n,vec3(.35,.55,.75))*1.25+fr*1.6+T*.04;
     vec3 holo=.55+.45*cos(6.2831*(h+vec3(.0,.33,.67)));
-    vec3 base=vec3(.30,.20,.95);
-    vec3 col=mix(base,holo,.38+.5*fr);
+    vec3 base=vec3(.14,.28,.85);
+    vec3 col=mix(base,holo,.3+.45*fr);
     vec3 L=normalize(vec3(-.5,.8,.6));
     float dif=max(dot(n,L),0.);
     float spec=pow(max(dot(reflect(-L,n),-rd),0.),40.);
     col*= .55+.6*dif;
     col+= spec*.75 + fr*.25*holo;
+    col=clamp(col,0.,1.);
+    /* contrast clamp: the name sits on this blob. Dark theme caps luminance at .15 (cream text ≥ 4.7:1);
+       light theme lifts it to at least .5 toward paper (ink text ≥ 9:1). */
+    vec3 lin=pow(col,vec3(2.2)); float Y=dot(lin,vec3(.2126,.7152,.0722));
+    if(D>.5){ if(Y>.15) lin*=.15/Y; }
+    else { vec3 paper=pow(vec3(.965,.953,.925),vec3(2.2)); float Yp=dot(paper,vec3(.2126,.7152,.0722)); if(Y<.5) lin=mix(lin,paper,(.5-Y)/(Yp-Y)); }
+    col=pow(lin,vec3(1./2.2));
     float edge=smoothstep(0.,.05,1.-fr*.15);
     gl_FragColor=vec4(col*edge,edge);
   }`;
@@ -1099,7 +1112,7 @@ a{color:inherit}
   const pr=gl.createProgram();gl.attachShader(pr,v);gl.attachShader(pr,f);gl.linkProgram(pr);gl.useProgram(pr);
   const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
   const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-  const uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M');
+  const uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M'),uD=gl.getUniformLocation(pr,'D');
   let mx=0,my=0,tx=0,ty=0;
   addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5)},{passive:true});
   function size(){const d=Math.min(devicePixelRatio||1,1.6);const r=cv.getBoundingClientRect();cv.width=Math.max(2,r.width*d);cv.height=Math.max(2,r.height*d);gl.viewport(0,0,cv.width,cv.height);}
@@ -1110,11 +1123,13 @@ a{color:inherit}
     if(visible){
       mx+=(tx-mx)*.05; my+=(ty-my)*.05;
       gl.uniform2f(uR,cv.width,cv.height); gl.uniform1f(uT,reduce?2.:(now-t0)/1000); gl.uniform2f(uM,mx,my);
+      gl.uniform1f(uD,document.documentElement.getAttribute('data-theme')==='dark'?1.:0.);
       gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT); gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
       const p=Math.min(1,scrollY/innerHeight); cv.style.transform=`scale(${1+p*.35})`; cv.style.opacity=String(1-p*.9);
     }
     if(!reduce) requestAnimationFrame(frame);
   }
+  window.__blobRedraw=()=>{ if(reduce) requestAnimationFrame(frame); };
   requestAnimationFrame(frame);
 })();
 </script>
